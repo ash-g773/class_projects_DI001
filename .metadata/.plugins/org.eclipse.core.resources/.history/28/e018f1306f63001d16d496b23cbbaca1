@@ -1,0 +1,6 @@
+package com.student.presentation;
+
+public interface StudentPresentation {
+
+	//here after implementing the service layer
+}

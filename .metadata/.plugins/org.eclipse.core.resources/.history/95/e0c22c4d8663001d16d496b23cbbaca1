@@ -1,0 +1,58 @@
+package com.student.presentation;
+
+import java.util.Scanner;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.student.exceptions.StudentExistsException;
+import com.student.service.StudentService;
+
+@Component("studentPresentation")
+public class StudentPresentationImpl implements StudentPresentation {
+	
+	private StudentService service;
+	
+	@Autowired
+	public StudentPresentationImpl(StudentService service) {
+		this.service = service;
+	}
+
+	@Override
+	public void showMenu() {
+			
+		System.out.println("Welcome to the Student Register!");
+		System.out.println("--------------------------------");
+		System.out.println("1. List all Students");
+		System.out.println("2. Search by Student ID");
+		System.out.println("3. Add a Student");
+		System.out.println("4. Exit the Register");
+		System.out.println("--------------------------------");
+		
+	}
+
+	@Override
+	public void performMenu(int choice) {
+			switch(choice) {
+			case 1:
+				System.out.println("Listing all student - to be implemented!");
+				break; //leaves the switch statement
+			case 2:
+				System.out.println("Search by student ID - to be implemented");
+				break;
+			case 3:
+				System.out.println("Add a student - to be implemented");
+				break;
+			case 4:
+				System.out.println("Thank you for using the Student Register system!");
+				System.exit(0);
+			default:
+				System.out.println("Unrecognized Input");
+				break;
+			}
+		
+	}
+	
+	//get some basic to be implemented messages in each of the menu options and then move onto the config and client files to test run the program
+
+}

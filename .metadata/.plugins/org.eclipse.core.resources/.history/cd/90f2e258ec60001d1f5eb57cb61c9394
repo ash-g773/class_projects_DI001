@@ -1,0 +1,5 @@
+package com.book.client;
+
+public class BookConfiguration {
+
+}

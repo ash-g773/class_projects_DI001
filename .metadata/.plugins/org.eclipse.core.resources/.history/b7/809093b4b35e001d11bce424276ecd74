@@ -1,0 +1,18 @@
+package com.ash.collectionsone;
+
+public class App {
+
+	public static void main(String[] args) {
+
+		/*
+		 * accepts 10 numbers from the user as input and store them in a collection (LinkedHashSet)
+		 * numbers should not be duplicated (automatic feature of hashing)
+		 * also get the stored index as well as the value
+		 */
+		
+		
+		
+
+	}
+
+}

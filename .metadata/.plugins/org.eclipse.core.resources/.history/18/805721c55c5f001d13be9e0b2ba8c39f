@@ -1,0 +1,44 @@
+package com.ash.employeetree;
+
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		Set<Employee> employees = new TreeSet<Employee>();
+		
+		System.out.println("Size : "+employees.size());
+		
+		employees.add(new Employee());
+		employees.add(new Employee(102, "Book 2", "Author B", 950, 1000));
+		employees.add(new Employee(103, "Book 3", "Author A", 870, 2100));
+		employees.add(new Employee(104, "Book 4", "Author C", 350, 800));
+		employees.add(new Employee(105, "Book 5", "Author M", 1450, 3200));
+		
+		System.out.println("Size : "+employees.size());
+		System.out.println(employees);
+		
+		employees.add(new Employee(101, "Book 1", "Author A", 450, 1200));
+		employees.add(new Employee(102, "Book 6", "Author X", 4150, 1900));
+		
+		System.out.println("Size : "+employees.size());
+		System.out.println(employees);
+		
+		
+		System.out.println("Traversal using for each loop");
+		for(Employee element:employees) {
+			System.out.println(element);
+		}
+
+		System.out.println("Traversal using Iterator");
+		Iterator<Employee> iterator=employees.iterator();
+		
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+		
+	}
+}

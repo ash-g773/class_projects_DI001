@@ -1,0 +1,8 @@
+package com.book.client;
+
+public class BookClient {
+
+	public static void main(String[] args) {
+		//todo
+	}
+}

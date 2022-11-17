@@ -1,0 +1,26 @@
+package com.ash.collectionsone;
+
+import java.util.Scanner;
+
+public class App {
+
+	public static void main(String[] args) {
+
+		/*
+		 * accepts 10 numbers from the user as input and store them in a collection (LinkedHashSet)
+		 * numbers should not be duplicated (automatic feature of hashing)
+		 * also get the stored index as well as the value
+		 */
+		
+		Scanner scr = new Scanner(System.in);
+		
+		
+		
+		for (int i = 0; i < 10; i++) {
+			System.out.println("Please enter number " + (i+1));
+			int numberToAdd = scr.nextInt();
+		}
+
+	}
+
+}

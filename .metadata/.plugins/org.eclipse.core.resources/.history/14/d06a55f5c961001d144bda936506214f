@@ -1,0 +1,13 @@
+package com.student.database;
+
+import java.util.Set;
+
+public class StudentDatabase {
+
+	//filling this in is the first step
+	
+	//set the database holding object to static private so that only one of it can exist at a time
+	static private Set<Integer, Student> studentList = new LinkedHashMap<Integer, Student>();
+	
+	
+}

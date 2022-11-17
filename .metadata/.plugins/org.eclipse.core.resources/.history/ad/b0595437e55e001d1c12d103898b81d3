@@ -1,0 +1,50 @@
+package com.ash.collectionsone;
+
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class App {
+
+	public static void main(String[] args) {
+
+		/*
+		 * accepts 10 numbers from the user as input and store them in a collection (LinkedHashSet)
+		 * numbers should not be duplicated (automatic feature of hashing)
+		 * also get the stored index as well as the value
+		 */
+		
+		Scanner scr = new Scanner(System.in);
+		
+		Set<LinkedNumbers> numbers = new LinkedHashSet<LinkedNumbers>();
+		//Set<Integer> numbersValues = new HashSet<Integer>();
+		
+		
+		//adds 10 unique inputs to numbers LinkedHashSet
+		while (numbers.size() < 10) {
+			System.out.println("Please enter number " + (numbers.size()+1));
+			LinkedNumbers numberToAdd = new LinkedNumbers();
+			int value = scr.nextInt();
+			numberToAdd.setNumber(value);
+			
+			for (int i = 0; i < numbers.size(); i++) {
+				numberToAdd.setIndex(i);
+				if (numbers.contains(numberToAdd)) {
+					System.out.println("This number already exists");
+				} else {
+					numbers.add(numberToAdd);
+				}
+			}
+				
+		}
+		
+		int indexer = 1;
+		for (LinkedNumbers number : numbers) {
+			System.out.println("Number " + indexer +", Value " + number.getNumber());
+			indexer++;
+		}
+		
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.student.database;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import com.student.entity.Student;
+
+public class StudentDatabase {
+
+	//filling this in is the first step
+	
+	//set the database holding object to static private so that only one of it can exist at a time
+	static private Map<Integer, Student> studentList = new LinkedHashMap<Integer, Student>();
+	
+	
+}

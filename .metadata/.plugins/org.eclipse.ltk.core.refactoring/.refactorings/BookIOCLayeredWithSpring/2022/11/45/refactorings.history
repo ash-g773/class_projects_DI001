@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;BookConfiguration.java&apos; to &apos;StudentConfigFilesExercise/src/com.student.client&apos;&#x0D;&#x0A;- Original project: &apos;BookIOCLayeredWithSpring&apos;&#x0D;&#x0A;- Destination element: &apos;StudentConfigFilesExercise/src/com.student.client&apos;&#x0D;&#x0A;- Original element: &apos;com.book.client.BookConfiguration.java&apos;" description="Copy compilation unit" destination="=StudentConfigFilesExercise/src&lt;com.student.client" element1="/src=/optional=/true=/=/maven.pomderived=/true=/&lt;com.book.client{BookConfiguration.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1668173845356" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,22 @@
+package com.student.service;
+
+import java.util.Collection;
+
+import com.student.entity.Student;
+import com.student.exceptions.StudentExistsException;
+
+public interface StudentService {
+	
+	//we come here from the dao implementation
+	
+	//these are the methods the presentation layer will call and the service layer will return from the dao layer (?)
+	
+	//listing all students
+	Collection<Student> getAllStudents();
+	
+	//searching for a student by id
+	Student searchStudentById(int id);
+	
+	//add a new student
+	boolean addNewStudent(Student student) throws StudentExistsException;
+}

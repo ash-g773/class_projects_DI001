@@ -1,0 +1,18 @@
+package com.book.client;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class BookConfiguration {
+
+	@Bean(name="dao")
+	public BookDaoImpl getPersistence() {
+		//constructor injection?
+		return new BookDaoImpl(getBookDatabase);
+	}
+	
+	@Bean(name="service")
+	public BookServiceImpl getBookService() {
+		return new BookServiceImpl(getPersistence()); //
+	}
+}

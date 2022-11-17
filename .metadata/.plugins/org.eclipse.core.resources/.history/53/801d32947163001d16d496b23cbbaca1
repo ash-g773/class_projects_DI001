@@ -1,0 +1,56 @@
+package com.student.presentation;
+
+import java.util.Scanner;
+
+import org.springframework.stereotype.Component;
+
+import com.student.exceptions.StudentExistsException;
+
+@Component("studentPresentation")
+public class StudentPresentationImpl implements StudentPresentation {
+
+	@Override
+	public void showMenu() {
+		
+		Scanner scr = new Scanner(System.in);
+		
+		System.out.println("Welcome to the Student Register!");
+		System.out.println("--------------------------------");
+		System.out.println("1. List all Students");
+		System.out.println("2. Search by Student ID");
+		System.out.println("3. Add a Student");
+		System.out.println("4. Exit the Register");
+		System.out.println("--------------------------------");
+		
+		System.out.println("Please enter your choice: ");
+		int choice = scr.nextInt();
+		performMenu(choice);		
+		
+	}
+
+	@Override
+	public void performMenu(int choice) {
+		try {
+			switch(choice) {
+			case 1:
+				System.out.println("Listing all student - to be implemented!");
+				break; //leaves the switch statement
+			case 2:
+				System.out.println("Search by student ID - to be implemented");
+				break;
+			case 3:
+				System.out.println("Add a student - to be implemented");
+				break;
+			case 4:
+				System.out.println("Thank you for using the Student Register system!");
+				System.exit(0);
+			default:
+				System.out.println("Unrecognized Input");
+				break;
+			}
+		} catch (StudentExistsException error)  {
+			System.out.println("This student exists already!");
+		}
+	}
+
+}

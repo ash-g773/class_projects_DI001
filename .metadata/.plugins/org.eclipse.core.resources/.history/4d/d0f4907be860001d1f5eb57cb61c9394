@@ -1,0 +1,17 @@
+package com.book.service;
+
+import java.util.Collection;
+import java.util.List;
+
+import com.book.entity.Book;
+
+public interface BookService {
+
+	public showmenu()Collection<Book> getAllEmployees(); //list all books
+	
+	Book searchBookById(int id); //search book id
+	
+	boolean addNewBook(Book book);//add new book
+	
+		
+}

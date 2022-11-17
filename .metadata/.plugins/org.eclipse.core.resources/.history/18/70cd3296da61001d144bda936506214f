@@ -1,0 +1,6 @@
+package com.student.persistence;
+
+public class StudentDao {
+
+	//the dao, data access object, accesses the database
+}

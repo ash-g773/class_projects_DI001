@@ -1,0 +1,9 @@
+package com.book.persistence;
+
+public interface BookDao {
+
+	Collection<Book> getAllBooks();
+	Book searchBook(int id);
+	Book insertBook(Book book);
+	Book deleteBook(int id);
+}

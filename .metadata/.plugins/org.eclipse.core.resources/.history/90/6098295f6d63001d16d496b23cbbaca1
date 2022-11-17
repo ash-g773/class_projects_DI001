@@ -1,0 +1,33 @@
+package com.student.service;
+
+import java.util.Collection;
+
+import com.student.entity.Student;
+import com.student.persistence.StudentDaoImpl;
+
+@Component
+public class StudentServiceImpl implements StudentService {
+	
+	private StudentDaoImpl dao;
+	
+	
+
+	@Override
+	public Collection<Student> getAllStudents() {
+		Collection<Student> allStudents = ;
+		return allStudents;
+	}
+
+	@Override
+	public Student searchStudentById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean addNewStudent(Student student) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

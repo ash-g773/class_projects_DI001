@@ -1,0 +1,31 @@
+package com.book.client;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.book.persistence.BookDaoImpl;
+import com.book.presentation.BookPresentationImpl;
+import com.book.service.BookServiceImpl;
+
+@Configuration
+public class BookConfiguration {
+
+	@Bean(name="dao")
+	public BookDaoImpl getPersistence() {
+		//constructor injection?
+		return new BookDaoImpl(); //why is there nothing in the brackets
+	}
+	
+	@Bean(name="service")
+	public BookServiceImpl getBookService() {
+		return new BookServiceImpl(getPersistence()); //
+	}
+	
+	@Bean(name="bookPresentation")
+	public BookPresentationImpl getBookPresentation() { //constructor injector should work?
+		BookPresentationImpl presentation = new BookPresentationImpl();
+		presentation.setBookService(getBookService()); //getBookService?
+		return presentation;
+	}
+	//returns everything backwards?
+}

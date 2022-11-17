@@ -1,0 +1,6 @@
+package com.book.presentation;
+
+public interface BookPresentation {
+
+	
+}

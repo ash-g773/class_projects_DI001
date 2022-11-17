@@ -1,0 +1,16 @@
+package com.ash.collectionsone;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class LinkedNumbers {
+	
+	private int index;
+	private int number;
+	
+
+}

@@ -1,0 +1,5 @@
+package com.book.persistence;
+
+public class BookDaoImpl implements BookDao{
+
+}

@@ -1,0 +1,37 @@
+package com.student.presentation;
+
+import java.util.Scanner;
+
+import org.springframework.stereotype.Component;
+
+@Component("studentPresentation")
+public class StudentPresentationImpl implements StudentPresentation {
+
+	@Override
+	public void showMenu() {
+		
+		Scanner scr = new Scanner(System.in);
+		
+		System.out.println("Welcome to the Student Register!");
+		System.out.println("--------------------------------");
+		System.out.println("1. List all Students");
+		System.out.println("2. Search by Student ID");
+		System.out.println("3. Add a Student");
+		System.out.println("4. Exit the Register");
+		System.out.println("--------------------------------");
+		
+		System.out.println("Please enter your choice: ");
+		int choice = scr.nextInt();
+		performMenu(choice);		
+		
+	}
+
+	@Override
+	public void performMenu(int choice) {
+		switch(choice) {
+		case 1:
+			System.out.println("Listing all student - to be implemented!");
+		}
+	}
+
+}

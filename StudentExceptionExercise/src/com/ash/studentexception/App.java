@@ -1,0 +1,61 @@
+package com.ash.studentexception;
+
+import java.util.Scanner;
+
+import com.ash.studentexceptionclasses.ExistingRollNumberException;
+import com.ash.studentexceptionclasses.InvalidAgeException;
+import com.ash.studentexceptionclasses.InvalidMarksException;
+
+public class App {
+
+	/*
+	 * asks the user to input the rollNo, name, age and marks of a Student - decided to move user interaction to main?
+	 * 
+	 * raise a custom defined exception when the user enters an existing student rollNo - done
+	 * 
+	 * raise a custom defined exception when the age is negative, less than 4 or greater than 18 - done
+	 * 
+	 * raise a custom defined exception when the marks is negative or greater than 100
+	 * 
+	 */
+	
+	public static void main(String[] args) {
+		
+		Scanner scr = new Scanner(System.in);
+		
+		try {
+			System.out.println("Please input the total number of students for this register: ");
+			int totalStudents = scr.nextInt();
+			
+			StudentList register = new StudentList(totalStudents);
+		
+			for (int i = 0; i < totalStudents; i++) {
+				Student student = new Student();
+				System.out.println("Please input student roll number:");
+				student.setRollNo(scr.next());
+				
+				System.out.println("Please input student name");
+				student.setName(scr.next());
+				
+				System.out.println("Please input student age");
+				student.setAge(scr.nextInt());
+				
+				System.out.println("Please input student marks");
+				student.setMarks(scr.nextInt());
+				
+				register.inputStudent(student, i);	
+			}
+			
+		} catch (ExistingRollNumberException exception) {
+			System.out.println("This roll number exists...");
+		} catch (InvalidAgeException exception) {
+			System.out.println("This age is invalid...");
+		} catch (InvalidMarksException exception) {
+			System.out.println("This mark is invalid...");
+		} catch (Exception exception) {
+			System.out.println("Something went wrong...");
+		}
+		
+				
+	}
+}

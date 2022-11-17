@@ -1,0 +1,32 @@
+package com.student.persistence;
+
+import java.util.Collection;
+
+import com.student.entity.Student;
+
+public class StudentDaoImpl implements StudentDao {
+	
+	//we come here after creating the implemented interface
+	
+	//all methods just return stuff from the dao directly i.e. everything is in the return line (?)
+	
+	//this class doesnt depend on any other clsses SO doesnt need a constructor
+
+	@Override
+	public Collection<Student> getAllStudents() {
+		return null;
+	}
+
+	@Override
+	public Student searchStudent(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean addStudent() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
